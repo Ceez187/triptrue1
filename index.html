@@ -182,14 +182,14 @@
     opacity:0.85;text-transform:uppercase;
   }
 
-  /* ---- HOW IT WORKS ---- */
-  .steps{display:grid;grid-template-columns:1fr;gap:0;counter-reset:step;}
-  @media(min-width:760px){.steps{grid-template-columns:repeat(3,1fr);}}
-  .step{padding:26px 24px;border-left:3px solid var(--orange);position:relative;}
-  @media(min-width:760px){.step{border-left:none;border-top:3px solid var(--orange);}}
-  .step .num{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--orange);display:block;margin-bottom:8px;}
-  .step h3{font-size:22px;margin-bottom:8px;}
-  .step p{font-size:14.5px;color:var(--steel);}
+  /* ---- PROCESS STRIP ---- */
+  .process-strip{background:var(--asphalt);color:var(--paper);padding:22px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .process-strip-inner{
+    display:flex;flex-wrap:wrap;align-items:center;justify-content:center;
+    gap:10px 18px;font-family:'IBM Plex Mono',monospace;font-size:13.5px;text-align:center;
+  }
+  .process-strip-inner strong{color:var(--orange);margin-right:6px;}
+  .process-sep{color:rgba(255,255,255,0.35);}
 
   /* ---- SERVICE AREA ---- */
   .area-wrap{display:grid;grid-template-columns:1fr;gap:32px;}
@@ -415,66 +415,14 @@
     </div>
   </section>
 
-  <!-- LARGE ITEM PICKUP & DELIVERY -->
-  <section class="section section-dark" id="delivery">
-    <div class="wrap">
-      <div class="section-intro">
-        <div>
-          <span class="kicker">Pickup & Delivery</span>
-          <h2>Bought it? We'll bring it home.</h2>
-        </div>
-        <p>Found a couch on Facebook Marketplace? New appliance with no way to move it? Two-man crew, careful loading — door to door.</p>
-      </div>
-      <div class="steps">
-        <div class="step">
-          <span class="num">We Pick Up</span>
-          <h3>Marketplace buys</h3>
-          <p>Facebook Marketplace, estate sales, Craigslist finds — send us the seller's address and we handle pickup, loading, and the awkward "how do I get this home" part.</p>
-        </div>
-        <div class="step">
-          <span class="num">We Deliver</span>
-          <h3>Furniture & appliances</h3>
-          <p>Washers, dryers, fridges, sofas, mattresses, bulk items. We bring it in, place it where you want it — not just dropped at the curb.</p>
-        </div>
-        <div class="step">
-          <span class="num">We Swap</span>
-          <h3>Haul-away combo</h3>
-          <p>New appliance in, old one out — same trip. Ask about combo pricing when you book delivery plus removal together.</p>
-        </div>
-      </div>
-      <div style="margin-top:32px;display:flex;flex-wrap:wrap;gap:14px;align-items:center;">
-        <a href="#book" class="btn btn-orange" onclick="selectService('Delivery / Marketplace Pickup')">Book a Pickup</a>
-        <span class="mono" style="font-size:13px;color:rgba(255,255,255,0.6);">Same-day slots available · Free estimate with item photo + both addresses</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- HOW IT WORKS -->
-  <section class="section section-dark" style="border-top:1px solid var(--line);">
-    <div class="wrap">
-      <div class="section-intro">
-        <div>
-          <span class="kicker">The Process</span>
-          <h2>From request to hauled-away.</h2>
-        </div>
-      </div>
-      <div class="steps">
-        <div class="step">
-          <span class="num">01 / Request</span>
-          <h3>Tell us the job</h3>
-          <p>Fill out the form below or call — describe what's going, snap a photo if it helps.</p>
-        </div>
-        <div class="step">
-          <span class="num">02 / Confirm</span>
-          <h3>Lock your slot</h3>
-          <p>We text or call within a few hours with a firm price and pickup window.</p>
-        </div>
-        <div class="step">
-          <span class="num">03 / Haul</span>
-          <h3>We show up & clear it</h3>
-          <p>Crew arrives on time, does the heavy lifting, sweeps the space clean. Whatever can be recycled or donated stays out of the landfill.</p>
-        </div>
-      </div>
+  <!-- PROCESS STRIP -->
+  <section class="process-strip">
+    <div class="wrap process-strip-inner">
+      <span><strong>01</strong> Request a quote</span>
+      <span class="process-sep">→</span>
+      <span><strong>02</strong> We confirm a firm price</span>
+      <span class="process-sep">→</span>
+      <span><strong>03</strong> We show up & haul it away</span>
     </div>
   </section>
 
