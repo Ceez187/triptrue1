@@ -182,28 +182,21 @@
     opacity:0.85;text-transform:uppercase;
   }
 
-  /* ---- PROCESS STRIP ---- */
-  .process-strip{background:var(--asphalt);color:var(--paper);padding:22px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
-  .process-strip-inner{
+  /* ---- MONO STRIP (process + trust) ---- */
+  .mono-strip{background:var(--asphalt);color:var(--paper);padding:22px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .mono-strip-inner{
     display:flex;flex-wrap:wrap;align-items:center;justify-content:center;
     gap:10px 18px;font-family:'IBM Plex Mono',monospace;font-size:13.5px;text-align:center;
   }
-  .process-strip-inner strong{color:var(--orange);margin-right:6px;}
-  .process-sep{color:rgba(255,255,255,0.35);}
+  .mono-strip-inner strong{color:var(--orange);margin-right:6px;}
+  .strip-sep{color:rgba(255,255,255,0.35);}
 
   /* ---- SERVICE AREA ---- */
   .area-wrap{display:grid;grid-template-columns:1fr;gap:32px;}
   @media(min-width:860px){.area-wrap{grid-template-columns:1fr 1fr;}}
-  .county-list{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px 20px;margin-top:18px;}
-  .county-list li{
-    font-family:'IBM Plex Mono',monospace;font-size:14px;
-    padding:10px 12px;border:1px solid var(--line);border-radius:2px;
-    display:flex;align-items:center;gap:8px;
-  }
-  .county-list li::before{content:"▸";color:var(--orange);}
   .callout-box{
     border:1px solid rgba(245,200,66,0.5);background:rgba(245,200,66,0.07);
-    padding:18px 20px;border-radius:2px;margin-top:20px;font-size:14.5px;
+    padding:12px 16px;border-radius:2px;margin-top:16px;font-size:13.5px;
   }
   .callout-box strong{color:var(--caution);}
 
@@ -233,18 +226,6 @@
   .form-footer{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;margin-top:26px;}
   .form-note{font-size:13px;color:rgba(255,255,255,0.55);max-width:38ch;}
   select{appearance:none;background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="14" height="9"><path d="M1 1l6 6 6-6" stroke="%23FFFFFF" stroke-width="2" fill="none"/></svg>');background-repeat:no-repeat;background-position:right 14px center;}
-
-  /* ---- TRUST ---- */
-  .trust-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;}
-  @media(min-width:760px){.trust-grid{grid-template-columns:repeat(5,1fr);}}
-  .trust-item{text-align:center;padding:20px 12px;border:1px solid var(--line);border-radius:2px;}
-  .trust-item .stamp-circle{
-    width:56px;height:56px;border-radius:50%;border:2px solid var(--orange);
-    display:flex;align-items:center;justify-content:center;margin:0 auto 12px;
-    font-family:'Big Shoulders Display',sans-serif;font-weight:800;color:var(--orange);font-size:13px;
-    transform:rotate(-4deg);
-  }
-  .trust-item p{font-size:13px;color:rgba(255,255,255,0.75);}
 
   /* ---- FOOTER ---- */
   footer{background:var(--ink);color:rgba(255,255,255,0.7);padding:44px 0 26px;}
@@ -416,12 +397,12 @@
   </section>
 
   <!-- PROCESS STRIP -->
-  <section class="process-strip">
-    <div class="wrap process-strip-inner">
+  <section class="mono-strip">
+    <div class="wrap mono-strip-inner">
       <span><strong>01</strong> Request a quote</span>
-      <span class="process-sep">→</span>
+      <span class="strip-sep">→</span>
       <span><strong>02</strong> We confirm a firm price</span>
-      <span class="process-sep">→</span>
+      <span class="strip-sep">→</span>
       <span><strong>03</strong> We show up & haul it away</span>
     </div>
   </section>
@@ -432,22 +413,15 @@
       <div>
         <span class="kicker">Where We Work</span>
         <h2>Five counties, fully insured.</h2>
-        <ul class="county-list">
-          <li>Okaloosa County</li>
-          <li>Walton County</li>
-          <li>Santa Rosa County</li>
-          <li>Escambia County</li>
-          <li>Bay County</li>
-        </ul>
-        <p class="mono" style="margin-top:16px;font-size:13px;color:var(--steel);">Fort Walton Beach · Destin · Niceville · Shalimar · Navarre · Crestview · 30A / South Walton · Pensacola · Panama City</p>
+        <p class="mono" style="margin-top:14px;font-size:13.5px;color:var(--steel);">Okaloosa · Walton · Santa Rosa · Escambia · Bay — including Fort Walton Beach, Destin, Niceville, Navarre, Crestview, 30A, Pensacola & Panama City.</p>
         <div class="callout-box">
-          <strong>Military & PCS families:</strong> we regularly work around Eglin AFB and Hurlburt Field schedules — tell us your orders timeline and we'll build around it.
+          <strong>Military & PCS:</strong> we work around Eglin AFB and Hurlburt Field schedules.
         </div>
       </div>
       <div>
         <span class="kicker">Also Booking Through</span>
         <h2 style="font-size:28px;">Property managers & realtors.</h2>
-        <p style="color:var(--steel);font-size:15px;margin-top:14px;max-width:44ch;">Tenant turnovers cleared in 24 hours, with before & after photos on every job. Evictions, foreclosure cleanouts, storage cleanouts — plus priority scheduling and discounted rates on standing agreements. Fully insured, so your property and tenants are protected.</p>
+        <p style="color:var(--steel);font-size:15px;margin-top:14px;max-width:44ch;">Tenant turnovers cleared in 24 hours. Priority scheduling and discounted rates on standing agreements.</p>
         <a href="#book" class="btn btn-dark" style="margin-top:20px;">Request B2B Pricing</a>
       </div>
     </div>
@@ -526,30 +500,17 @@
   </section>
 
   <!-- TRUST -->
-  <section class="section section-dark">
-    <div class="wrap">
-      <div class="trust-grid">
-        <div class="trust-item">
-          <div class="stamp-circle">LIC &<br>INS</div>
-          <p>Licensed & Insured</p>
-        </div>
-        <div class="trust-item">
-          <div class="stamp-circle">LOCAL<br>OWNED</div>
-          <p>Locally Owned & Operated</p>
-        </div>
-        <div class="trust-item">
-          <div class="stamp-circle">SAME<br>DAY</div>
-          <p>Same-Day Service Available</p>
-        </div>
-        <div class="trust-item">
-          <div class="stamp-circle">WE<br>RECYCLE</div>
-          <p>Items Recycled & Donated When Possible</p>
-        </div>
-        <div class="trust-item">
-          <div class="stamp-circle">PCS<br>OK</div>
-          <p>Military-Friendly Scheduling</p>
-        </div>
-      </div>
+  <section class="mono-strip">
+    <div class="wrap mono-strip-inner">
+      <span>Licensed & Insured</span>
+      <span class="strip-sep">·</span>
+      <span>Locally Owned & Operated</span>
+      <span class="strip-sep">·</span>
+      <span>Same-Day Service Available</span>
+      <span class="strip-sep">·</span>
+      <span>Recycled & Donated When Possible</span>
+      <span class="strip-sep">·</span>
+      <span>Military-Friendly Scheduling</span>
     </div>
   </section>
 
