@@ -220,6 +220,17 @@
   }
   .callout-box strong{color:var(--caution);}
 
+  /* ---- REVIEWS ---- */
+  .reviews-grid{display:grid;grid-template-columns:1fr;gap:20px;}
+  @media(min-width:760px){.reviews-grid{grid-template-columns:repeat(3,1fr);}}
+  .review-card{
+    background:var(--paper);color:var(--ink);border-radius:2px;padding:22px;
+    box-shadow:0 10px 26px rgba(0,0,0,0.25);display:flex;flex-direction:column;gap:12px;
+  }
+  .review-stars{color:var(--caution);font-size:16px;letter-spacing:2px;}
+  .review-text{font-size:14.5px;color:var(--steel);flex:1;}
+  .review-author{font-family:'IBM Plex Mono',monospace;font-size:12.5px;font-weight:600;}
+
   /* ---- BOOKING FORM ---- */
   .booking-section{background:var(--paper);}
   .form-card{
@@ -493,6 +504,35 @@
         <h2 style="font-size:28px;">Property managers & realtors.</h2>
         <p style="color:var(--steel);font-size:15px;margin-top:14px;max-width:44ch;">Tenant turnovers cleared in 24 hours. Priority scheduling and discounted rates on standing agreements.</p>
         <a href="#book" class="btn btn-dark" style="margin-top:20px;">Request B2B Pricing</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="section section-dark">
+    <div class="wrap">
+      <div class="section-intro">
+        <div>
+          <span class="kicker">Google Reviews</span>
+          <h2>What customers say.</h2>
+        </div>
+      </div>
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Great service, very professional, price is always reasonable. Gets the job done fast."</p>
+          <p class="review-author">— Lawonda · Google review</p>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Superior service, great choice!"</p>
+          <p class="review-author">— Devin Anderson · Google review</p>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Excellent service, communication, and above all, knowledgeable packers who cared. Would definitely utilize them again."</p>
+          <p class="review-author">— Leonor Dottin · Google review</p>
+        </div>
       </div>
     </div>
   </section>
