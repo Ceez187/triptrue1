@@ -401,7 +401,7 @@
     <div class="wrap mono-strip-inner">
       <span><strong>01</strong> Request a quote</span>
       <span class="strip-sep">→</span>
-      <span><strong>02</strong> We confirm a firm price</span>
+      <span><strong>02</strong> We confirm price from photos or an on-site look</span>
       <span class="strip-sep">→</span>
       <span><strong>03</strong> We show up & haul it away</span>
     </div>
@@ -433,16 +433,16 @@
       <div class="section-intro">
         <div>
           <span class="kicker">Request Pickup</span>
-          <h2>Get your firm price.</h2>
+          <h2>Get an accurate estimate.</h2>
         </div>
-        <p>Submit the details below — no payment required until we confirm your quote.</p>
+        <p>Submit the details below — add photos if you can for the most accurate price. No payment required to request a quote.</p>
       </div>
 
       <div class="form-card">
         <span class="kicker" style="color:var(--caution);">Dispatch Request Form</span>
         <h3 style="font-size:24px;">Tell us what's going and where.</h3>
 
-        <form name="emg4u-quote-request" method="POST" action="https://formsubmit.co/ajax/Emginc4u@gmail.com" id="quoteForm">
+        <form name="emg4u-quote-request" method="POST" action="https://formsubmit.co/ajax/Emginc4u@gmail.com" enctype="multipart/form-data" id="quoteForm">
           <input type="hidden" name="_subject" value="New EMG4U quote request" />
           <input type="hidden" name="_template" value="table" />
           <p class="hidden-field">
@@ -487,10 +487,14 @@
               <label for="details">Job Details</label>
               <textarea id="details" name="details" placeholder="What needs to go? Stairs, elevator, heavy items, PCS orders date, etc."></textarea>
             </div>
+            <div class="field full">
+              <label for="photos">Photos (optional, but helps most)</label>
+              <input type="file" id="photos" name="photos" accept="image/*" multiple>
+            </div>
           </div>
 
           <div class="form-footer">
-            <p class="form-note">We'll text or call you back with a firm price — usually same day.</p>
+            <p class="form-note">No photos handy? No problem — we'll text or call to get a few, or schedule a quick on-site look before confirming price.</p>
             <button type="submit" class="btn btn-orange">Submit Request</button>
           </div>
         </form>
