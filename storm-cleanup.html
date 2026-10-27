@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Storm & Hurricane Cleanup | EMG4U Inc. | Okaloosa County & Panhandle</title>
+<meta name="description" content="Fast storm and hurricane debris cleanup in Okaloosa County and the Florida Panhandle. Fallen trees, flood-damaged furniture, flooring, drywall, appliances. Call 850-428-8637 for a free quote.">
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/jpeg" href="assets/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --asphalt:#0A1E5E;
+    --ink:#071540;
+    --paper:#FFFFFF;
+    --orange:#CC1F1F;
+    --steel:#42507A;
+    --caution:#F5C842;
+    --line: rgba(255,255,255,0.16);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Inter',sans-serif;
+    background:var(--paper);
+    color:var(--ink);
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.display{
+    font-family:'Big Shoulders Display',sans-serif;
+    text-transform:uppercase;
+    letter-spacing:0.01em;
+    line-height:0.95;
+    text-wrap:balance;
+  }
+  .mono{font-family:'IBM Plex Mono',monospace;}
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:900px;margin:0 auto;padding:0 20px;}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    font-family:'Big Shoulders Display',sans-serif;
+    font-weight:800;text-transform:uppercase;letter-spacing:0.03em;
+    font-size:17px;padding:14px 26px;border-radius:2px;
+    border:2px solid var(--ink);cursor:pointer;transition:transform .15s ease;
+  }
+  .btn-orange{background:var(--orange);color:var(--paper);border-color:var(--orange);}
+  .btn-orange:hover{transform:translateY(-2px);}
+  .btn-dark{background:var(--ink);color:var(--paper);border-color:var(--ink);}
+  .btn-dark:hover{transform:translateY(-2px);}
+  .btn-block{width:100%;}
+  :focus-visible{outline:3px solid var(--orange);outline-offset:2px;}
+  .section{padding:52px 0;}
+  .section-dark{background:var(--asphalt);color:var(--paper);}
+  .kicker{
+    font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.16em;
+    text-transform:uppercase;color:var(--orange);margin-bottom:10px;display:block;
+  }
+  .section-dark .kicker{color:var(--caution);}
+  .section h2{font-size:clamp(28px,5vw,38px);font-weight:800;margin-bottom:14px;}
+
+  /* ---- CALL BAR ---- */
+  .call-bar{
+    position:sticky;top:0;z-index:50;background:var(--ink);
+    border-bottom:3px solid var(--orange);
+  }
+  .call-bar-inner{
+    display:flex;align-items:center;justify-content:space-between;gap:12px;
+    padding:10px 16px;max-width:900px;margin:0 auto;
+  }
+  .call-bar-logo{display:flex;align-items:center;gap:8px;}
+  .call-bar-logo img{width:32px;height:32px;border-radius:50%;background:#fff;}
+  .call-bar-logo span{font-family:'Big Shoulders Display',sans-serif;font-weight:900;color:#fff;font-size:17px;}
+  .call-bar a.call-btn{
+    display:flex;align-items:center;gap:8px;background:var(--orange);color:#fff;
+    font-family:'Big Shoulders Display',sans-serif;font-weight:800;font-size:16px;
+    letter-spacing:0.02em;padding:10px 16px;border-radius:2px;white-space:nowrap;
+  }
+
+  /* ---- HERO ---- */
+  .hero{
+    background:
+      repeating-linear-gradient(135deg, rgba(204,31,31,0.08) 0 2px, transparent 2px 26px),
+      var(--asphalt);
+    color:var(--paper);padding:48px 0 40px;text-align:center;
+  }
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.12em;
+    color:var(--caution);text-transform:uppercase;margin-bottom:16px;
+    border:1px solid rgba(245,200,66,0.4);padding:6px 10px;border-radius:2px;
+  }
+  .eyebrow::before{content:"●";color:var(--orange);}
+  .hero h1{font-size:clamp(34px,8vw,56px);font-weight:900;color:var(--paper);margin-bottom:16px;}
+  .hero h1 em{font-style:normal;color:var(--orange);}
+  .hero p{font-size:17px;max-width:48ch;margin:0 auto 26px;color:rgba(255,255,255,0.85);}
+  .hero-ctas{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;}
+
+  /* ---- FORM ---- */
+  .form-card{
+    background:var(--asphalt);color:var(--paper);
+    border-radius:2px;padding:28px 22px;
+    box-shadow:0 20px 50px rgba(7,21,64,0.18);
+  }
+  @media(min-width:600px){.form-card{padding:36px;}}
+  .field{display:flex;flex-direction:column;gap:6px;margin-bottom:14px;}
+  label{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.06em;text-transform:uppercase;color:rgba(255,255,255,0.7);}
+  input, textarea{
+    background:rgba(255,255,255,0.06);
+    border:1px solid rgba(255,255,255,0.28);
+    color:var(--paper);
+    padding:13px 14px;border-radius:2px;font-size:16px;font-family:'Inter',sans-serif;width:100%;
+  }
+  input::placeholder, textarea::placeholder{color:rgba(255,255,255,0.4);}
+  input:focus, textarea:focus{border-color:var(--orange);}
+  textarea{resize:vertical;min-height:80px;}
+  .hidden-field{position:absolute;left:-9999px;}
+  .form-note{font-size:12.5px;color:rgba(255,255,255,0.55);margin-top:12px;text-align:center;}
+
+  /* ---- SERVICES ---- */
+  .services-grid{display:grid;grid-template-columns:1fr;gap:14px;}
+  @media(min-width:640px){.services-grid{grid-template-columns:repeat(2,1fr);}}
+  .svc-card{border:1px solid rgba(7,21,64,0.14);border-radius:2px;padding:18px;box-shadow:0 8px 20px rgba(7,21,64,0.06);}
+  .svc-card h3{font-size:19px;margin-bottom:6px;}
+  .svc-card p{font-size:13.5px;color:var(--steel);}
+
+  /* ---- AREA ---- */
+  .county-line{font-family:'IBM Plex Mono',monospace;font-size:14px;margin-top:10px;}
+  .city-line{font-size:13.5px;color:rgba(255,255,255,0.7);margin-top:8px;}
+
+  /* ---- PHOTOS (placeholder, ready for real job photos) ---- */
+  .photo-grid{display:grid;grid-template-columns:1fr;gap:14px;}
+  @media(min-width:640px){.photo-grid{grid-template-columns:repeat(3,1fr);}}
+  .photo-slot{
+    aspect-ratio:4/3;border:2px dashed rgba(7,21,64,0.25);border-radius:2px;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;
+    color:var(--steel);text-align:center;padding:12px;
+  }
+  .photo-slot .ph-label{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.06em;text-transform:uppercase;}
+
+  /* ---- REVIEWS ---- */
+  .reviews-grid{display:grid;grid-template-columns:1fr;gap:16px;}
+  @media(min-width:640px){.reviews-grid{grid-template-columns:repeat(3,1fr);}}
+  .review-card{
+    background:var(--paper);color:var(--ink);border-radius:2px;padding:18px;
+    box-shadow:0 10px 26px rgba(0,0,0,0.25);display:flex;flex-direction:column;gap:10px;
+  }
+  .review-stars{color:var(--caution);font-size:15px;letter-spacing:2px;}
+  .review-text{font-size:13.5px;color:var(--steel);flex:1;}
+  .review-author{font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600;}
+
+  /* ---- TRUST STRIP ---- */
+  .trust-strip{background:var(--ink);color:var(--paper);padding:16px 0;}
+  .trust-strip-inner{
+    display:flex;flex-wrap:wrap;align-items:center;justify-content:center;
+    gap:8px 16px;font-family:'IBM Plex Mono',monospace;font-size:12.5px;text-align:center;
+  }
+  .trust-sep{color:rgba(255,255,255,0.35);}
+
+  /* ---- FOOTER CTA ---- */
+  .footer-cta{background:var(--asphalt);color:var(--paper);padding:44px 0;text-align:center;}
+  .footer-phone{font-family:'Big Shoulders Display',sans-serif;font-weight:900;font-size:clamp(30px,7vw,46px);color:var(--caution);}
+  .footer-meta{font-size:12.5px;color:rgba(255,255,255,0.55);margin-top:18px;}
+  .footer-meta a{text-decoration:underline;text-underline-offset:2px;}
+
+  .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);}
+  @media (prefers-reduced-motion: reduce){*{transition:none!important;scroll-behavior:auto!important;}}
+</style>
+</head>
+<body>
+
+<div class="call-bar">
+  <div class="call-bar-inner">
+    <a href="#top" class="call-bar-logo">
+      <img src="assets/logo.jpg" alt="EMG4U Inc. logo">
+      <span>EMG4U</span>
+    </a>
+    <a href="tel:8504288637" class="call-btn">📞 850-428-8637</a>
+  </div>
+</div>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow">Okaloosa County & the Florida Panhandle</span>
+      <h1>Storm & Hurricane<br><em>Cleanup — Fast.</em></h1>
+      <p>Fallen trees, flood-damaged furniture, ruined flooring and drywall — hauled out quick so you can start rebuilding. Licensed & insured, free estimates, priority scheduling for storm jobs.</p>
+      <div class="hero-ctas">
+        <a href="tel:8504288637" class="btn btn-orange">Call 850-428-8637</a>
+        <a href="#quote" class="btn btn-dark" style="background:transparent;border-color:#fff;color:#fff;">Get a Free Quote ↓</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUOTE FORM -->
+  <section class="section" id="quote">
+    <div class="wrap" style="max-width:560px;">
+      <div style="text-align:center;margin-bottom:22px;">
+        <span class="kicker">Free Quote</span>
+        <h2>What needs to go?</h2>
+        <p style="color:var(--steel);font-size:14.5px;">Takes 30 seconds. We'll call or text back fast.</p>
+      </div>
+
+      <div class="form-card">
+        <form name="storm-quote-request" method="POST" action="https://formsubmit.co/Emginc4u@gmail.com" enctype="multipart/form-data" id="stormForm">
+          <input type="hidden" name="_subject" value="New STORM CLEANUP quote request" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_next" value="https://emg4uinc.com/storm-cleanup.html?sent=1#quote" />
+          <p class="hidden-field">
+            <label>Don't fill this out if you're human: <input name="_honey" tabindex="-1" autocomplete="off"></label>
+          </p>
+
+          <div class="field">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Jane Smith" required>
+          </div>
+          <div class="field">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" placeholder="(850) 000-0000" required>
+          </div>
+          <div class="field">
+            <label for="zip">Zip Code</label>
+            <input type="text" id="zip" name="zip" inputmode="numeric" pattern="[0-9]{5}" placeholder="32547" required>
+          </div>
+          <div class="field">
+            <label for="details">What Needs to Go?</label>
+            <textarea id="details" name="details" placeholder="Fallen tree limbs, flood-damaged couch, soaked drywall, etc." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-orange btn-block">Get My Free Quote</button>
+          <p class="form-note">No payment required. We'll confirm exact pricing from photos or an on-site look.</p>
+        </form>
+        <p id="formConfirm" style="display:none;margin-top:14px;color:var(--caution);font-family:'IBM Plex Mono',monospace;font-size:13px;text-align:center;">✓ Request received — we'll be in touch shortly.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section" style="background:#F7F8FB;">
+    <div class="wrap">
+      <div style="margin-bottom:24px;">
+        <span class="kicker">Storm Services</span>
+        <h2>What we clear.</h2>
+      </div>
+      <div class="services-grid">
+        <div class="svc-card">
+          <h3>Storm Debris</h3>
+          <p>Fallen tree limbs, branches, fencing, and yard wreckage hauled off fast.</p>
+        </div>
+        <div class="svc-card">
+          <h3>Flood-Damaged Furniture</h3>
+          <p>Couches, mattresses, cabinets — anything water-ruined and unsalvageable.</p>
+        </div>
+        <div class="svc-card">
+          <h3>Flooring & Drywall</h3>
+          <p>Torn-out wet flooring, carpet, and drywall ready for haul-away.</p>
+        </div>
+        <div class="svc-card">
+          <h3>Appliances</h3>
+          <p>Flood-damaged washers, dryers, fridges, and water heaters removed.</p>
+        </div>
+        <div class="svc-card">
+          <h3>Rental Cleanouts</h3>
+          <p>Fast turnaround for landlords and property managers after storm damage.</p>
+        </div>
+        <div class="svc-card">
+          <h3>Estate Cleanouts</h3>
+          <p>Whole-property cleanouts following storm damage, foreclosure, or loss.</p>
+        </div>
+        <div class="svc-card">
+          <h3>Garages</h3>
+          <p>Flooded or storm-wrecked garage contents cleared in one visit.</p>
+        </div>
+      </div>
+      <div style="margin-top:26px;text-align:center;">
+        <a href="#quote" class="btn btn-dark">Get a Free Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- AREAS SERVED -->
+  <section class="section section-dark" style="text-align:center;">
+    <div class="wrap">
+      <span class="kicker">Where We Work</span>
+      <h2>Five counties, fully insured.</h2>
+      <p class="county-line">Okaloosa · Walton · Santa Rosa · Escambia · Bay</p>
+      <p class="city-line">Fort Walton Beach · Destin · Niceville · Shalimar · Navarre · Crestview · 30A · Pensacola · Panama City</p>
+    </div>
+  </section>
+
+  <!-- PHOTOS (placeholder — swap in real storm-job photos) -->
+  <section class="section">
+    <div class="wrap">
+      <div style="margin-bottom:22px;text-align:center;">
+        <span class="kicker">Recent Jobs</span>
+        <h2>Photos coming soon.</h2>
+        <p style="color:var(--steel);font-size:14.5px;">We'll post real before/after shots from storm jobs here.</p>
+      </div>
+      <div class="photo-grid">
+        <div class="photo-slot">
+          <span class="ph-label">Storm Debris Removal</span>
+        </div>
+        <div class="photo-slot">
+          <span class="ph-label">Flood-Damaged Furniture</span>
+        </div>
+        <div class="photo-slot">
+          <span class="ph-label">Property Cleanout</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="section section-dark">
+    <div class="wrap">
+      <div style="margin-bottom:20px;text-align:center;">
+        <span class="kicker">Google Reviews</span>
+        <h2>What customers say.</h2>
+      </div>
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Great service, very professional, price is always reasonable. Gets the job done fast."</p>
+          <p class="review-author">— Lawonda · Google review</p>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Superior service, great choice!"</p>
+          <p class="review-author">— Devin Anderson · Google review</p>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Excellent service, communication, and above all, knowledgeable packers who cared. Would definitely utilize them again."</p>
+          <p class="review-author">— Leonor Dottin · Google review</p>
+        </div>
+      </div>
+      <p style="margin-top:20px;text-align:center;">
+        <a href="https://maps.app.goo.gl/GT6oEPZUKUSfkYzR7" target="_blank" rel="noopener" class="mono" style="font-size:13px;color:var(--caution);text-decoration:underline;text-underline-offset:2px;">See all reviews on Google →</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- TRUST -->
+  <section class="trust-strip">
+    <div class="wrap trust-strip-inner">
+      <span>Licensed & Insured</span>
+      <span class="trust-sep">·</span>
+      <span>Locally Owned & Operated</span>
+      <span class="trust-sep">·</span>
+      <span>Same-Day Service Available</span>
+      <span class="trust-sep">·</span>
+      <span>Priority Storm Scheduling</span>
+    </div>
+  </section>
+
+  <!-- FOOTER CTA -->
+  <section class="footer-cta">
+    <div class="wrap">
+      <span class="kicker">Ready When You Are</span>
+      <a href="tel:8504288637" class="footer-phone">850-428-8637</a>
+      <div style="margin-top:20px;">
+        <a href="#quote" class="btn btn-orange">Get a Free Quote</a>
+      </div>
+      <p class="footer-meta">EMG4U Inc. · Shalimar, FL · <a href="mailto:Emginc4u@gmail.com">Emginc4u@gmail.com</a> · <a href="/">emg4uinc.com</a></p>
+    </div>
+  </section>
+
+</main>
+
+<script>
+  var form = document.getElementById('stormForm');
+  form.addEventListener('submit', function(){
+    var submitBtn = form.querySelector('button[type="submit"]');
+    if (submitBtn) submitBtn.disabled = true;
+    // Native submit — required for FormSubmit to process correctly;
+    // FormSubmit redirects back here via _next.
+  });
+
+  if (window.location.search.indexOf('sent=1') !== -1) {
+    var confirmMsg = document.getElementById('formConfirm');
+    if (confirmMsg) confirmMsg.style.display = 'block';
+    var cleanUrl = window.location.pathname + window.location.hash;
+    window.history.replaceState(null, '', cleanUrl);
+  }
+</script>
+
+</body>
+</html>
